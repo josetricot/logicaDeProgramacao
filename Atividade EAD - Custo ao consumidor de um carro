@@ -1,0 +1,56 @@
+/*O custo ao consumidor de um carro novo é a soma do custo de fábrica com a porcentagem do distribuidor e
+ dos impostos (aplicados ao custo de fábrica).
+ Supondo que a porcentagem do distribuidor seja de 28% e os impostos de 45%,
+ escreva um algoritmo que leia o custo de fábrica de um carro e escreva o custo ao consumidor.
+
+    cc := cf + cf * 0.45 + cf * 0.28
+
+OBS: fazer o algoritmo utilizando a porcentagem do distribuidor e os impostos declarados como CONSTANTES
+
+Algoritmo "Calculadora_custo_consumidor"
+   // Declaração de constantes
+   Const
+      PORCENTAGEM_DISTRIBUIDOR <- 0.28
+      PORCENTAGEM_IMPOSTOS <- 0.45
+
+   // Declaração de variáveis
+   Var
+      custo_fabrica, custo_consumidor: real
+
+   Início
+      // Entrada de dados
+      Escreva("Digite o custo de fábrica: ")
+      Leia(custo_fabrica)
+      
+      // Processamento: cálculo do custo ao consumidor
+      custo_consumidor <- custo_fabrica + (custo_fabrica * PORCENTAGEM_IMPOSTOS) + (custo_fabrica * PORCENTAGEM_DISTRIBUIDOR)
+      
+      // Saída de dados
+      Escreva("O custo para o consumidor é: ", custo_consumidor)
+   Fim
+
+
+Teste de Mesa
+Teste 1
+Entrada:
+custo_fabrica = 10000
+
+Processamento:
+
+Impostos = 10000 * 0.45 = 4500
+Distribuidor = 10000 * 0.28 = 2800
+Custo consumidor = 10000 + 4500 + 2800 = 17300
+Saída Esperada:
+"O custo para o consumidor é: 17300"
+
+Teste 2
+Entrada:
+custo_fabrica = 20000
+
+Processamento:
+
+Impostos = 20000 * 0.45 = 9000
+Distribuidor = 20000 * 0.28 = 5600
+Custo consumidor = 20000 + 9000 + 5600 = 34600
+Saída Esperada:
+"O custo para o consumidor é: 34600"
