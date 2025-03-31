@@ -1,0 +1,21 @@
+Algoritmo "caucula_maior_valor"
+
+Var
+   // Seção de Declarações das variáveis
+   a, b: inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+
+   escreval ("Informe o primeiro número: ")
+   leia (a)
+   escreval ("Informe a segundo número: ")
+   leia (b)
+
+   se a > b entao
+      escreval ("O primeiro número é maior: ", a)
+   senao
+      escreval ("O segundo número é maior: ", b)
+   fimse
+
+Fimalgoritmo
