@@ -1,0 +1,215 @@
+Ctrl + g        corrigir indentação 
+Divisão  /  
+Divisão inteira  \
+DIV        resultado da divisão inteira
+MOD        resto da divisão
+F7       perfil (nº de vezes que cada linha é executada)
+
+//Exerc. Estrutura de Seleção - comando SE - VisualG
+
+/*1)Faça um algoritmo que leia um número inteiro e mostre uma mensagem indicando se este número é par ou ímpar.*/
+
+Algoritmo "CalculaParOuImpar"
+
+Var
+   a: inteiro
+
+Inicio
+   escreval ("Informe um número inteiro: ")
+   leia (a)
+
+   se (a MOD 2 = 0) entao
+      escreval ("O número informado é par.")
+   senao
+      escreval ("O número informado é ímpar.")
+   fimse
+
+Fimalgoritmo
+
+TesteDeMesa
+
+valor de a | resultado | resposta
+10             0           par
+5              1	   ímpar
+
+/*2)Fazer um algoritmo que lê duas notas e as faltas de um aluno. Calcular a média e ao final mostrar a média e uma mensagem, “Aprovado e Boas Férias’ se a média for maior ou igual a 7 e tiver até 8 faltas e, ‘Reprovado e Recuperação dia 07’, caso contrário.*/
+
+Algoritmo "AprovadoOuReprovado"
+
+Var
+   falta: inteiro
+   nota1, nota2, media: real
+
+Inicio
+   escreval ("Informe a primeira nota: ")
+   leia (nota1)
+   escreval ("Informe a segunda nota: ")
+   leia (nota2)
+   escreval ("Informe o número de faltas: ")
+   leia (falta)
+ 
+   media := (nota1 + nota2) / 2
+
+   se media >= 7 e falta <= 8 entao
+      escreval ("Aprovado! Boas Férias! Sua média é: ", media)
+   senao
+      escreval ("Reprovado e recuperação dia 07. Sua média foi: ", media)
+   fimse
+
+Fimalgoritmo
+
+TesteDeMesa
+
+nota1 | nota2 | falta | media |resposta
+7       8        7	7,5	aprovado
+6       9        9      7,5     reprovado
+
+/*3)Tendo como dados de entrada altura e o sexo de uma pessoa (‘M’ masculino e ‘F’ feminino), construa um algoritmo que calcule seu peso ideal, utilizando as seguintes fórmulas:
+ Homens: (72.7*h) - 58
+ Mulheres: (62.1*h) - 44.7 */
+
+Algoritmo "CalculadoraPesoIdeal"
+
+Var
+   altura, pesoIdeal: real
+   sexo: caractere
+
+Inicio
+   escreval ("Informe a altura em metros: ")
+   leia (altura)
+
+   escreval ("Informe o sexo (M para masculino, F para feminino): ")
+   leia (sexo)
+
+   escolha sexo
+      caso "M", "m"
+         pesoIdeal := (72.7 * altura) - 58
+         escreval ("O peso ideal em quilos é: ", pesoIdeal)
+
+      caso "F", "f"
+         pesoIdeal := (62.1 * altura) - 44.7
+         escreval ("O peso ideal em quilos é: ", pesoIdeal)
+
+      outrocaso
+         escreval ("Sexo inválido! Digite M para masculino ou F para feminino.")
+   fimescolha
+
+Fimalgoritmo
+
+TesteDeMesa
+
+altura | sexo | resposta
+1.76     M       69,95
+1.60     F	 54,66
+
+/* 4)Fazer um algoritmo que lê um valor. Se o valor for maior que zero apresenta o valor +5. Se o valor for menor que zero apresenta o valor -10. E, se o valor for zero, lê um segundo valor e apresenta este valor *3. */
+
+Algoritmo "AlgoritmoLeValor"
+
+Var
+   valor, segundoValor, resultado: real
+
+Inicio
+   escreval ("Informe um valor: ")
+   leia (valor)
+
+   se valor > 0 entao
+      resultado := valor + 5
+      escreval ("O valor somado a 5 é: ", resultado)
+   
+   senao se valor < 0 entao
+      resultado := valor - 10
+      escreval ("O valor subtraído de 10 é: ", resultado)
+   
+   senao
+      escreval ("O valor é zero. Informe um segundo valor: ")
+      leia (segundoValor)
+      resultado := segundoValor * 3
+      escreval ("O segundo valor multiplicado por 3 é: ", resultado)
+   fimse
+
+Fimalgoritmo
+
+TesteDeMesa
+
+valor | resposta
+1       +5
+-3      -10
+
+/* 5) Escreva um algoritmo que leia três números inteiros diferentes e mostre o maior deles. */
+
+Algoritmo "CalculaMaiorValor"
+
+Var
+   a, b, c, maior: inteiro
+
+Inicio
+   escreval ("Informe o primeiro número: ")
+   leia (a)
+   escreval ("Informe o segundo número: ")
+   leia (b)
+   escreval ("Informe o terceiro número: ")
+   leia (c)
+
+   // Verifica qual é o maior número
+   maior := a
+
+   se b > maior entao
+      maior := b
+   fimse
+
+   se c > maior entao
+      maior := c
+   fimse
+
+   escreval ("O maior número é: ", maior)
+
+Fimalgoritmo
+
+
+TesteDeMesa
+a | b | resposta
+7  3    primeiro número maior
+2  4	segundo número maior
+
+/* 6) Construa um algoritmo que leia o time preferido do usuário e mostre na tela o estado ao qual o time pertence. Utilize os dados da tabela abaixo: 
+
+Time 			| Estado
+Flamengo/Botafogo	  Time carioca - RJ
+Palmeiras/Santos	  Time paulista - SP
+Internacional/Grêmio      Time gaúcho - RS
+Remo/Paysandu  		  Time paraense - PA
+
+Caso o usuário digite o nome de um time que não conste na tabela, mostre a seguinte mensagem: "Desculpe, seu time ainda não foi cadastrado”. */
+Algoritmo "EstadoTime"
+
+Var
+   time: caractere
+
+Inicio
+   escreval ("Informe o nome do seu time: ")
+   leia (time)
+
+   se (time = "Flamengo") ou (time = "Botafogo") entao
+      escreval ("Time carioca - RJ")
+
+   senao se (time = "Palmeiras") ou (time = "Santos") entao
+      escreval ("Time paulista - SP")
+
+   senao se (time = "Internacional") ou (time = "Grêmio") entao
+      escreval ("Time gaúcho - RS")
+
+   senao se (time = "Remo") ou (time = "Paysandu") entao
+      escreval ("Time paraense - PA")
+
+   senao
+      escreval ("Desculpe, seu time ainda não foi cadastrado.")
+
+   fimse
+
+Fimalgoritmo
+
+TesteDeMesa
+time  	  | resposta
+Grêmio	    Time gaúcho - RS
+Bahia	    Desculpe, seu time ainda não foi cadastrado
