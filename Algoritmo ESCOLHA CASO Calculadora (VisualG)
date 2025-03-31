@@ -1,0 +1,41 @@
+Algoritmo "cauculadora"
+
+Var
+   // Seção de Declarações das variáveis
+   a,b: inteiro
+   op: caracter
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+
+   escreval ("Informe o primeiro número: ")
+   leia (a)
+   escreval ("Informe o segundo número: ")
+   leia (b)
+
+   escreval ("Informe a operação")
+   escreval ("digite + para somar")
+   escreval ("digite - para subtrair")
+   escreval ("digite * para para multiplicar")
+   escreval ("digite / para dividir")
+   leia (op)
+
+   escolha op
+      caso "+"
+   escreva ("A soma é" ,a+b)
+   
+   caso "-"
+   escreva ("A subtração é" ,a-b)
+   
+   caso "*"
+   escreva ("A multiplicação é" ,a*b)
+
+   caso "/"
+   escreva ("A divisão é" ,a/b)
+   
+   outrocaso
+   escreva ("Operador inválido!")
+   
+   fimescolha
+
+Fimalgoritmo
