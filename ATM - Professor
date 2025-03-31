@@ -1,0 +1,17 @@
+Algoritmo "menor_numero_notas"
+Var
+   valor, n100, n50, n10, n5, n1:inteiro
+inicio
+       escreval ("Informe um valor")
+       leia (valor)
+       n100 := valor Div 100
+       valor := valor Mod 100
+       n50 := valor Div 50
+       valor := valor Mod 50
+       n10 := valor Div 10
+       valor := valor Mod 10
+       n5 := valor Div 5
+       n1 := valor Mod 5
+       escreval (n100," Notas de 100;",n50," Notas de 50;",n10," Notas de 10")
+       escreval (n5," Notas de 5;",n1," Notas de 1")
+Fimalgoritmo
