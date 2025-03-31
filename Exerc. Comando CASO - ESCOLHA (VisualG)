@@ -1,0 +1,251 @@
+//Exerc. Comando CASO - ESCOLHA - VisualG
+
+/*1) Uma escola precisa classificar seus alunos conforme a idade. Faça um algoritmo que leia nome e idade do aluno e, a seguir, classifique-o em uma das categorias descritas na tabela abaixo:
+
+IDADE 	  |  CATEGORIA
+0 a 3	     Bebê
+4 a 10	     Criança
+11 a 17      Adolescente
+18 ou mais   Adulto
+
+*/
+
+Algoritmo "CategoriaAluno"
+
+Var
+   idade: inteiro
+
+Inicio
+   escreval ("Informe a idade da criança: ")
+   leia (idade)
+
+   escolha idade
+      caso 0,1,2,3
+         escreval ("Categoria: Bebê")
+      caso 4,5,6,7,8,9,10
+         escreval ("Categoria: Criança")
+      caso 11,12,13,14,15,16,17
+         escreval ("Categoria: Adolescente")
+      outrocaso
+         escreval ("Categoria: Adulto")
+   fimescolha
+
+Fimalgoritmo
+
+
+TesteDeMesa
+
+idade digitada | resposta
+10		 criança
+3		 bebê	
+
+/*2) Desenvolva um algoritmo que receba um número de 1 a 7 referente ao dia da semana, sendo 1= domingo, 2= segunda, 
+3 = terça  ...  7 = sábado e retorne ao usuário o dia da semana correspondente ao número digitado. Caso seja informado um número diferente dos contidos no intervalo de 1 a 7, retorne “Número inválido”.*/
+
+Algoritmo "DiaDaSemana"
+
+Var
+   dia: caractere
+
+Inicio
+   escreval ("Informe um número referente ao dia da semana (1 a 7): ")
+   leia (dia)
+
+   escolha dia
+      caso "1"
+         escreval ("Domingo")
+      caso "2"
+         escreval ("Segunda-feira")
+      caso "3"
+         escreval ("Terça-feira")
+      caso "4"
+         escreval ("Quarta-feira")
+      caso "5"
+         escreval ("Quinta-feira")
+      caso "6"
+         escreval ("Sexta-feira")
+      caso "7"
+         escreval ("Sábado")
+      outrocaso
+         escreval ("Número inválido")
+   fimescolha
+
+Fimalgoritmo
+
+
+TesteDeMesa
+
+número digitado | resposta
+2		  Segunda-feira
+7	 	  Sábado
+9	          Número inválido
+
+/* 3) Algoritmo onde o usuário possa escolher que tipo de média deseja calcular a partir de 3 notas informadas (N1, N2, N3). Faça um algoritmo que leia as notas, a opção escolhida pelo usuário e calcule a média.
+Opção 1:  Média Aritmética Simples (soma de todos os elementos dividido pelo nº de elementos somados) 
+Opção 2: Média Aritmética Ponderada (leva em consideração o peso de cada nota. Considere n1=peso 3, n2= peso 3, n3= peso 4) 
+EX: (n1*3 + n2*3 + n3*4)/10
+Obs: caso o usuário digite um número diferente de 1 ou 2 para a opção da média, mostre a mensagem “Opção inválida” . */
+
+Algoritmo "CalculadoraDeMedias"
+
+Var
+   N1, N2, N3, media: real
+   opcao: caractere
+
+Inicio
+   escreval ("Informe a primeira nota: ")
+   leia (N1)
+
+   escreval ("Informe a segunda nota: ")
+   leia (N2)
+
+   escreval ("Informe a terceira nota: ")
+   leia (N3)
+
+   escreval ("Escolha a opção de cálculo da média:")
+   escreval ("Digite '1' para Média Aritmética Simples")
+   escreval ("Digite '2' para Média Aritmética Ponderada")
+   leia (opcao)
+
+   escolha opcao
+      caso "1"
+         media := (N1 + N2 + N3) / 3
+         escreval ("A Média Aritmética Simples é: ", media)
+
+      caso "2"
+         media := (N1 * 3 + N2 * 3 + N3 * 4) / 10
+         escreval ("A Média Aritmética Ponderada é: ", media)
+
+      outrocaso
+         escreval ("Opção inválida!")
+   fimescolha
+
+Fimalgoritmo
+
+
+TesteDeMesa
+
+N1  | N2  | N3 | Opção | Resposta
+8     7,5   9     1       A Média Aritmética Simples é: 8.1667
+5     6     7     2   	  A Média Aritmética Ponderada é: 6.0
+
+/* 4) O cardápio de uma lanchonete é dado abaixo:
+
+ Código   Produto           Valor
+      1      Hamburguer       R$ 23,80
+      2      Cheeseburguer    R$  25,80
+      3      Fritas           R$ 18,90
+      4      Refrigerante     R$   5,50
+      5      Milkshake        R$  12,90
+   
+Escreva um algoritmo que leia o código do produto consumido pelo cliente,  a quantidade e calcule o valor que deve ser pago à lanchonete.
+Obs: considere que a cada execução será aceita a escolha de um único produto. */
+
+Algoritmo "lanchonete"
+
+Var
+   quantidade: inteiro
+   valorApagar: real
+   opcao: caractere
+
+Inicio
+   escreval ("Digite '1' para Hamburguer")
+   escreval ("Digite '2' para Cheeseburguer")
+   escreval ("Digite '3' para Fritas")
+   escreval ("Digite '4' para Refrigerante")
+   escreval ("Digite '5' para Milkshake")
+   leia (opcao)
+
+   escreval ("Digite a quantidade: ")
+   leia (quantidade)
+
+   escolha opcao
+      caso "1"
+         valorApagar := 23.80 * quantidade
+         escreval ("O valor a pagar é: R$ ", valorApagar)
+      
+      caso "2"
+         valorApagar := 25.80 * quantidade
+         escreval ("O valor a pagar é: R$ ", valorApagar)
+      
+      caso "3"
+         valorApagar := 18.90 * quantidade
+         escreval ("O valor a pagar é: R$ ", valorApagar)
+      
+      caso "4"
+         valorApagar := 5.50 * quantidade
+         escreval ("O valor a pagar é: R$ ", valorApagar)
+      
+      caso "5"
+         valorApagar := 12.90 * quantidade
+         escreval ("O valor a pagar é: R$ ", valorApagar)
+
+      outrocaso
+         escreval ("Opção inválida!")
+   fimescolha
+
+Fimalgoritmo
+
+
+TesteDeMesa
+
+opção | quantidade | valor a pagar
+ 2       3           O valor a pagar é: R$ 77.40
+ 4       5           O valor a pagar é: R$ 27.50
+
+/* 5)  Uma empresa concederá um aumento de salário aos seus funcionários, variável de acordo com o cargo, conforme a tabela abaixo. Faça um algoritmo que leia o salário e o cargo de um funcionário e calcule o novo salário. Se o cargo do funcionário não estiver na tabela, ele deverá, então, receber 40% de aumento.  Mostre o salário antigo, o novo salário e a diferença. 
+
+Código  |  Cargo    | Percentual
+101	  Gerente     10%
+102	  Engenheiro  20%
+103       Técnico     30%
+
+ */
+
+Algoritmo "AumentoDeSalario"
+
+Var
+   salario, novoSalario, diferenca: real
+   opcao: caractere
+
+Inicio
+   escreval ("Informe o salário: ")
+   leia (salario)
+
+   escreval ("Digite '101' para Gerente")
+   escreval ("Digite '102' para Engenheiro")
+   escreval ("Digite '103' para Técnico")
+   escreval ("Digite qualquer outro número se o cargo não estiver na lista")
+   leia (opcao)
+
+   escolha opcao
+      caso "101"
+         novoSalario := salario + (salario * 10/100)
+      
+      caso "102"
+         novoSalario := salario + (salario * 20/100)
+
+      caso "103"
+         novoSalario := salario + (salario * 30/100)
+
+      outrocaso
+         novoSalario := salario + (salario * 40/100)
+   fimescolha
+
+   diferenca := novoSalario - salario
+
+   escreval ("O salário antigo era: R$ ", salario)
+   escreval ("O novo salário é: R$ ", novoSalario)
+   escreval ("O aumento foi de: R$ ", diferenca)
+
+Fimalgoritmo
+
+TesteDeMesa
+salário inicial | opção | resposta
+2500               102     O salário antigo era: R$ 2500  
+			   O novo salário é: R$ 3000  
+			   O aumento foi de: R$ 500 
+
+400                200     O salário antigo era: R$ 4000  
+			   O novo salário é: R$ 5600  
+                           O aumento foi de: R$ 1600 
