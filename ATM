@@ -1,0 +1,54 @@
+/*Você foi contratado para programar um caixa eletrônico (ATM).
+Esse ATM precisa fornecer ao cliente a quantia solicitada em reais, 
+usando o menor número possível de notas de R$100, R$50, R$10, R$5  (priorizando sempre as notas de maior valor).
+O objetivo é implementar um algoritmo que leia o valor solicitado pelo usuário e mostre quantas notas de cada valor serão entregues.
+
+Importante: O ATM deve fornecer o valor exato solicitado. Caso contrário informe valor inválido e solicite um novo valor. */
+
+Algoritmo "ATM"
+   // Declaração de variáveis
+   Var
+      valor, notas100, notas50, notas10, notas5: real
+
+   Início
+      // Entrada de dados
+      Escreva("Digite o valor que deseja sacar: ")
+      Leia(valor_solicitado)
+      
+      // Verifica se o valor é múltiplo de 5
+
+     
+        // Processamento
+        notas100 := valor DIV 100
+        valor := valor MOD 100
+	
+	notas50 := valor DIV 50
+        valor := valor MOD 50
+         
+	notas10 := valor DIV 10
+        valor := valor MOD 10
+         
+	notas5 := valor DIV 5
+        valor := valor MOD 5
+
+	notas1 := valor MOD 5
+            
+         
+         // Saída de dados
+         Escreva("Notas de R$100: ", notas100, "\n")
+         Escreva("Notas de R$50: ", notas50, "\n")
+         Escreva("Notas de R$10: ", notas10, "\n")
+         Escreva("Notas de R$5: ", notas5, "\n")
+	 Escreva("Notas de R$1: ", notas1, "\n")
+         
+        
+    Fim
+
+
+
+valor notas100 notas50 notas10 notas5 notas1
+175   1
+75             1
+25                     2
+5                               1
+0                                     0	     
