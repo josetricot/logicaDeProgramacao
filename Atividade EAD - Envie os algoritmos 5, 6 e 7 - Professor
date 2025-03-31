@@ -1,0 +1,63 @@
+5) 
+Algoritmo "Idade_Dias"
+//Faça um algoritmo que leia a idade de uma pessoa expressa
+// em anos, meses e dias e mostre-a apenas em dias.
+//Considere o ano com 365 dias
+
+Var
+   a, m, d, idade: inteiro
+Inicio
+
+   //Entrada de Dados
+   escreval("Informe a idade em anos, meses e dias")
+   Leia(a, m , d)
+
+   //Processamento
+   idade <- a *365 + m *30 + d
+
+   //Saída
+   escreval("Dias de vida:", idade)
+
+Fimalgoritmo
+
+
+
+
+6)
+Algoritmo "Idade_Anos_Meses_Dias"
+//Faça um algoritmo que leia a idade de uma pessoa expressa
+//em dias e mostre-a em anos, meses e dias.
+//Considere o ano com 365 dias
+
+Var
+   ano, mes, dia, idade: inteiro
+Inicio
+
+   //Entrada de Dados
+   escreval("Informe a idade em dias")
+   Leia(idade)
+
+   //Processamento
+   ano := idade div 365
+   idade := idade mod 365
+   mes := idade div 30
+   dia:= idade mod 30
+
+   //Saída
+   escreval(ano, " Anos / ",mes," Meses / ",dia," Dias")
+
+Fimalgoritmo
+
+
+7)
+Algoritmo "Calcula_Distancia"
+Var
+        x1, x2, y1, y2, distancia: real
+Inicio
+         escreval("Informe dois valores para o 1° ponto")
+         leia (x1, y1)
+         escreva ("Informe dois valores para o  2° ponto")
+         leia (x2, y2)
+         distancia := raizq (quad (x2 - x1) + quad (y2 - y1))
+         escreva ("Distância entre os pontos: ", distancia)
+fimalgoritmo
