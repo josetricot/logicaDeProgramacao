@@ -1,0 +1,175 @@
+5)
+Algoritmo "idade_em_dias"
+ 
+   Var
+      anos, meses, dias, total: inteiro
+
+   Início
+    
+      Escreva("Digite a idade em anos: ")
+      Leia(anos)
+      Escreva("Digite a quantidade de meses: ")
+      Leia(meses)
+      Escreva("Digite a quantidade de dias: ")
+      Leia(dias)
+      
+          total := (anos * 365) + (meses * 30) + dias
+      
+          Escreva("A idade convertida para dias é: ", total)
+   Fim
+
+Teste de Mesa 1
+
+Entradas:
+
+anos = 1
+meses = 1
+dias = 1
+
+Processamento:
+
+Dias correspondentes aos anos: 1 × 365 = 365
+Dias correspondentes aos meses: 1 × 30 = 30
+Soma os dias restantes: 1
+Total: 365 + 30 + 1 = 396 dias
+
+Saída:"A idade convertida para dias é: 396"
+
+Teste de Mesa 2
+
+Entradas:
+
+anos = 2
+meses = 5
+dias = 15
+
+Processamento:
+
+Dias correspondentes aos anos: 2 × 365 = 730
+Dias correspondentes aos meses: 5 × 30 = 150
+Soma os dias restantes: 15
+Total: 730 + 150 + 15 = 895 dias
+
+Saída:"A idade convertida para dias é: 895"
+
+
+6)
+Algoritmo "idade_dias_para_ano_mes_dia"
+   
+   Var
+      total_dias, anos, meses, dias, resto: inteiro
+
+   Início
+     
+      Escreva("Digite a idade em dias: ")
+      Leia(totalDias)
+      
+    
+      anos := total_dias DIV 365         // calcula o número de anos completos
+      resto := total_dias MOD 365         // obtém os dias restantes após os anos completos
+      
+      meses := resto DIV 30              // calcula o número de meses completos com base nos dias restantes
+      dias := resto MOD 30               // dias que sobraram após os meses completos
+      
+     
+      Escreva("A idade é: ", anos, " anos, ", meses, " meses e ", dias, " dias")
+   Fim
+
+Teste de Mesa
+
+Teste 1:
+
+Entrada: total_dias = 800
+
+Processamento:
+anos: 800 DIV 365 = 2
+resto: 800 MOD 365 = 70
+meses: 70 DIV 30 = 2
+dias: 70 MOD 30 = 10
+
+Saída: "A idade é: 2 anos, 2 meses e 10 dias"
+
+Teste 2:
+
+Entrada: total_dias = 400
+
+Processamento:
+dnos: 400 DIV 365 = 1
+resto: 400 MOD 365 = 35
+meses: 35 DIV 30 = 1
+dias: 35 MOD 30 = 5
+
+Saída: "A idade é: 1 anos, 1 meses e 5 dias"
+
+
+7)
+Algoritmo "distancia_entre_pontos"
+   // Declaração de variáveis
+   Var
+      x1, y1, x2, y2, distancia: real
+
+   Início
+      
+      Escreva("Digite o valor de x1: ")
+      Leia(x1)
+      Escreva("Digite o valor de y1: ")
+      Leia(y1)
+      Escreva("Digite o valor de x2: ")
+      Leia(x2)
+      Escreva("Digite o valor de y2: ")
+      Leia(y2)
+      
+      // Aplicando a fórmula da distância
+      distancia := Raizq( Quad(x2 - x1) + Quad(y2 - y1) )
+      
+      Escreva("A distância entre os pontos é: ", distancia)
+   Fim
+
+
+Teste de Mesa 1
+Entradas:
+
+x1 = 0
+y1 = 0
+x2 = 3
+y2 = 4
+
+Processamento:
+
+Cálculo das diferenças:
+(x2 - x1) = 3
+(y2 - y1) = 4
+
+Aplicando o operador Quad:
+Quad(3) = 9
+Quad(4) = 16
+
+Soma dos quadrados: 9 + 16 = 25
+Aplicando Raizq:
+Raizq(25) = 5
+
+Saída:"A distância entre os pontos é: 5"
+
+Teste de Mesa 2
+Entradas:
+
+x1 = 2
+y1 = -1
+x2 = 5
+y2 = 3
+
+Processamento:
+
+Cálculo das diferenças:
+(x2 - x1) = 5 - 2 = 3
+(y2 - y1) = 3 - (-1) = 4
+
+Aplicando o operador Quad:
+Quad(3) = 9
+Quad(4) = 16
+
+Soma dos quadrados: 9 + 16 = 25
+Aplicando Raizq:
+Raizq(25) = 5
+
+Saída:"A distância entre os pontos é: 5"
