@@ -1,0 +1,23 @@
+Algoritmo "caucula-media"
+
+Var
+   // Seção de Declarações das variáveis
+   nota1, nota2, media: real
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+
+   escreval ("Informe a primeira nota: ")
+   leia (nota1)
+   escreval ("Informe a segunda nota: ")
+   leia (nota2)
+
+   media:= (nota1 + nota2)/2
+
+   se (media >= 7) entao
+      escreval ("Aprovado! Sua média foi:",media)
+   senao
+      escreval("Reprovado! Sua média foi:",media)
+   fimse
+
+Fimalgoritmo
