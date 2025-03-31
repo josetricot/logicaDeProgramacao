@@ -1,0 +1,41 @@
+           Com constante
+
+Algoritmo "custo_carro_consumidor"
+
+const
+    imposto = 0.45
+    porc_distr = 0.28
+
+Var
+    cf, cc: real
+
+Inicio
+
+   escreval ("Informe o custo de fábrica")
+   leia (cf)
+   cc := cf + cf * imposto + cf * porc_distr
+   escreval("Custo ao consumidor R$:", cc)
+   
+Fimalgoritmo
+
+
+
+
+
+
+
+          Sem cosntante
+
+Algoritmo "custo_carro_consumidor"
+
+Var
+     	 cf, cc: real
+
+Inicio
+
+   escreval ("Informe o custo de fábrica")
+   leia (cf)
+   cc := cf + cf * 0.45 + cf * 0.28
+   escreval("Custo ao consumidor R$:", cc)
+
+Fimalgoritmo
