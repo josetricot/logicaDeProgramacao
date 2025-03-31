@@ -1,0 +1,29 @@
+Algoritmo "categoria_aluno"
+
+Var
+   // Seção de Declarações das variáveis
+
+   idade: caracter
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+
+   escreval ("Informe a idade da criança")
+   leia (idade)
+
+   escolha idade
+   caso "0,1,2,3"
+   escreva ("Categoria: Bebê")
+   
+   caso "4,5,6,7,8,9,10"
+   escreva ("Categoria: Criança")
+   
+   caso "11,12,13,14,15,16,17"
+   escreva ("Categoria: Adolecente")
+
+   outrocaso
+   escreva ("Categoria Adulto")
+   
+   fimescolha
+
+Fimalgoritmo
