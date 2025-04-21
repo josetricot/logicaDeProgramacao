@@ -1,3 +1,12 @@
+/*
+Algoritmo 3
+Condições de conclusão
+Leia 2 valores inteiros. Verifique qual valor é menor e qual é maior. Mostre todos os valores entre o menor e maior de forma crescente (do menor número para o maior), em seguida, mostre todos os valores em ordem decrescente (do maior para o menor). OBS: inclua os valores informados na resposta.
+Entrada
+2 números inteiros.
+Saída
+impressão de todos os números em ordem crescente e em seguida na ordem decrescente. Imprima a ordem crescente na mesma linha, separados por espaço. Imprima a ordem decrescente na outra linha, separados por espaço. */
+
 programa {
   funcao inicio() {
     
