@@ -1,3 +1,24 @@
+/* 
+REVISÃO 1 - Desafio das Portas Mágicas
+Condições de conclusão
+Jogo das Portas Misteriosas
+Você foi encarregado de desenvolver um mini jogo onde o jogador escolhe entre três portas: PortaA, PortaB e PortaC. Cada porta esconde uma surpresa diferente, podendo ser algo bom, perigoso ou inesperado. As mensagens reveladas ao abrir cada porta devem ser criadas por você, usando a criatividade.
+
+Após cada rodada, pergunte se o jogador deseja jogar novamente. O jogo será encerrado quando responder que não deseja continuar.
+
+Requisitos:
+Solicitar que o jogador escolha entre as opções: PortaA, PortaB ou PortaC.
+
+Exibir uma mensagem correspondente à porta escolhida (mensagens livres e criativas).
+
+Validar a entrada: só aceitar os nomes válidos das portas.
+
+Após revelar a surpresa atrás da porta, perguntar ao jogador: “Deseja jogar novamente? (S/N)”
+
+O jogo deve se repetir enquanto a resposta for “S” ou "s".
+
+Ao final, exibir uma mensagem de despedida. */
+
 programa
 {
     funcao inicio()
