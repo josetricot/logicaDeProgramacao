@@ -1,3 +1,28 @@
+/* 
+REVISÃO 2 - Vinícola Vinho Bom
+Condições de conclusão
+A vinícola VINHO BOM deseja realizar um levantamento completo do estoque de vinhos em sua adega. A adega é composta por vários espaços, e em cada espaço podem ser armazenados diferentes tipos de vinhos, em quantidades variadas. Você foi encarregado de desenvolver um algoritmo que ajude nesse processo. Para cada espaço da adega, o algoritmo deve permitir o registro de múltiplas entradas, informando:
+
+A quantidade de garrafas e o código correspondente ao tipo de vinho, conforme abaixo:
+
+T — Tinto
+
+B — Branco
+
+R — Rosé
+
+O algoritmo deve ser executado repetidamente, permitindo que o usuário informe os dados de todos os espaços da adega. O processo será encerrado quando o usuário digitar a letra F como finalizador.
+
+Ao final, o algoritmo deve calcular e exibir:
+
+ a) O total de garrafas de cada tipo de vinho (Tinto, Branco e Rosé);
+
+ b) O total geral de garrafas na adega;
+
+ c) A porcentagem de garrafas de vinho Rosé.
+
+IMPORTANTE: certifique-se de validar os códigos digitados, aceitando apenas T, B, R ou F. */
+
 programa
 {
 	
