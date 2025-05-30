@@ -1,9 +1,3 @@
-/*Matriz
-  
-6) Crie um algoritmo que leia duas matrizes 5x2 e crie uma terceira matriz também 5x2 com o valor da soma dos elementos de mesmo índice.
-
-*/
-
 /* Matriz
 6) Crie um algoritmo que leia duas matrizes 5x2 e crie uma terceira matriz também 5x2 com o valor da soma dos elementos de mesmo índice.
 */
