@@ -1,3 +1,12 @@
+//Em uma pesquisa feita com 5 alunos frequentadores do R.U. de uma institui√ß√£o de ensino,  perguntou-se o nome do aluno, quantas refei√ß√µes fez no m√™s anterior e como avalia a refei√ß√£o (O-√≥tima, B-bom, R-regular e P-p√©ssima). Caso o usu√°rio informe uma letra inv√°lida, o programa deve exibir uma mensagem de erro e solicitar a entrada novamente, at√© que uma letra v√°lida seja digitada.
+//Ao final, o programa deve informar:
+// a) o n√∫mero de alunos que fez menos de 10 refei√ß√µes no m√™s anterior;
+// b) o n√∫mero de alunos que fez entre 10 e 20 refei√ß√µes;
+// c) o n√∫mero de alunos que fez mais de 20 refei√ß√µes identificando seus respectivos nomes;
+//d) a porcentagem de cada avalia√ß√£o;
+//e) o n√∫mero de alunos que avaliaram a refei√ß√£o como P-p√©ssima e que fizeram menos de 10 refei√ß√µes.
+
+
 Algoritmo "RU"
 Tipo
    cadastro = registro
@@ -13,7 +22,7 @@ Var
    avaliacaoPeMenos10Ref: inteiro
    indiceMaior20: inteiro
 Inicio
-   // InicializaÁ„o das vari·veis
+   // Inicializa√ß√£o das vari√°veis
    menosDezRef <- 0
    entreDezEvinteRef <- 0
    maisDeVinteRef <- 0
@@ -25,13 +34,13 @@ Inicio
    indiceMaior20 <- 1
 
    para i de 1 ate 5 faca
-       escreva ("Digite o nome do ", i, "∫ aluno: ")
+       escreva ("Digite o nome do ", i, "¬∫ aluno: ")
        leia (aluno[i].nome)
-       escreva ("Digite o n˙mero de refeiÁıes: ")
+       escreva ("Digite o n√∫mero de refei√ß√µes: ")
        leia (aluno[i].quantRefeicoes)
 
        repita
-           escreva("Digite a avaliaÁ„o (O-Ûtima, B-bom, R-regular, P-pÈssima): ")
+           escreva("Digite a avalia√ß√£o (O-√≥tima, B-bom, R-regular, P-p√©ssima): ")
            leia (aluno[i].avaliacao)
 
            se (aluno[i].avaliacao <> "O") e
@@ -42,7 +51,7 @@ Inicio
               (aluno[i].avaliacao <> "r") e
               (aluno[i].avaliacao <> "P") e
               (aluno[i].avaliacao <> "p") entao
-               escreval ("AvaliaÁ„o inv·lida! Digite somente O, B, R ou P")
+               escreval ("Avalia√ß√£o inv√°lida! Digite somente O, B, R ou P")
            fimse
        ate (aluno[i].avaliacao = "O") ou (aluno[i].avaliacao = "o") ou
            (aluno[i].avaliacao = "B") ou (aluno[i].avaliacao = "b") ou
@@ -78,22 +87,22 @@ Inicio
       fimescolha
    fimpara
 
-   escreval("a) N˙mero de alunos que fizeram menos de 10 refeiÁıes: ", menosDezRef)
-   escreval("b) N˙mero de alunos que fizeram entre 10 e 20 refeiÁıes: ", entreDezEvinteRef)
-   escreval("c) N˙mero de alunos que fizeram mais de 20 refeiÁıes: ", maisDeVinteRef)
+   escreval("a) N√∫mero de alunos que fizeram menos de 10 refei√ß√µes: ", menosDezRef)
+   escreval("b) N√∫mero de alunos que fizeram entre 10 e 20 refei√ß√µes: ", entreDezEvinteRef)
+   escreval("c) N√∫mero de alunos que fizeram mais de 20 refei√ß√µes: ", maisDeVinteRef)
 
    se maisDeVinteRef > 0 entao
-      escreval("   Nomes dos alunos que fizeram mais de 20 refeiÁıes:")
-      para i de 1 atÈ maisDeVinteRef faca
+      escreval("   Nomes dos alunos que fizeram mais de 20 refei√ß√µes:")
+      para i de 1 at√© maisDeVinteRef faca
          escreval("   - ", vetNomeAlunoAvaliacaoMaior20[i])
       fimpara
    fimse
 
-   escreval("d) Porcentagem de cada avaliaÁ„o:")
-   escreval("   ”tima (O): ", (avalicoesO*100)/5, "%")
+   escreval("d) Porcentagem de cada avalia√ß√£o:")
+   escreval("   √ìtima (O): ", (avalicoesO*100)/5, "%")
    escreval("   Bom (B): ", (avalicoesB*100)/5, "%")
    escreval("   Regular (R): ", (avalicoesR*100)/5, "%")
-   escreval("   PÈssima (P): ", (avalicoesP*100)/5, "%")
+   escreval("   P√©ssima (P): ", (avalicoesP*100)/5, "%")
 
-   escreval("e) N˙mero de alunos que avaliaram como P-pÈssima e fizeram menos de 10 refeiÁıes: ", avaliacaoPeMenos10Ref)
+   escreval("e) N√∫mero de alunos que avaliaram como P-p√©ssima e fizeram menos de 10 refei√ß√µes: ", avaliacaoPeMenos10Ref)
 Fimalgoritmo
