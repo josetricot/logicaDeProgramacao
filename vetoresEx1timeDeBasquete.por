@@ -21,7 +21,6 @@ programa {
         leia(vet_nome[0])
         escreva ("Altura do jogador 1: \n")
         leia(vet_alt[0])
-        totAlt = vet_alt[0]
         
         // Inicializa com o primeiro jogador
         maiorAltura = vet_alt[0]
@@ -38,8 +37,9 @@ programa {
 
             escreva ("Altura do jogador ", i+1, ": \n")
             leia(vet_alt[i])
-            totAlt = totAlt + vet_alt[i]
-
+        }    
+        
+        para (i=0; i<12; i++) {
             se (vet_alt[i] > maiorAltura) {
                 maiorAltura = vet_alt[i]
                 nomeMaior = vet_nome[i]
@@ -48,6 +48,7 @@ programa {
                 menorAltura = vet_alt[i]
                 nomeMenor = vet_nome[i]
             }
+            totAlt = totAlt + vet_alt[i]
         }    
 
         mediaAlt = totAlt/12.0
