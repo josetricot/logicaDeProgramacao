@@ -70,7 +70,12 @@ Algoritmo "idade_dias_para_ano_mes_dia"
       
       meses := resto DIV 30              // calcula o número de meses completos com base nos dias restantes
       dias := resto MOD 30               // dias que sobraram após os meses completos
-      
+
+//portugol 
+//
+//anos = total_dias \ 365                  Operador DIV (divisão inteira)
+//meses = (total_dias % 365) \ 30          % é o MOD
+//dias = (total_dias % 365) % 30
      
       Escreva("A idade é: ", anos, " anos, ", meses, " meses e ", dias, " dias")
    Fim
