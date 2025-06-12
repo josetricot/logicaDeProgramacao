@@ -52,3 +52,62 @@ valor notas100 notas50 notas10 notas5 notas1
 25                     2
 5                               1
 0                                     0	     
+
+
+// PORTUGOL CORRIGIDO
+
+programa {
+  funcao inicio() {
+    
+          inteiro valor, notas100, notas50, notas20, notas10, notas5, notas2, notas1
+
+
+      // Entrada de dados
+      escreva("Digite o valor que deseja sacar: ")
+      leia(valor)
+     
+        // Processamento
+        notas100 = valor / 100
+        valor = valor % 100
+	
+	      notas50 = valor / 50
+        valor = valor % 50
+
+        notas20 = valor / 20
+        valor = valor % 20
+
+	      notas10 = valor / 10
+        valor = valor % 10
+         
+	      notas5 = valor / 5
+        valor = valor % 5
+
+        notas2 = valor /2
+        valor = valor % 2
+
+	      notas1 = valor / 1
+         
+        // Saída de dados
+        se (notas100 > 0) {
+          escreva("Notas de R$100: ", notas100, "\n") 
+        }
+        se (notas50 > 0) { 
+          escreva("Notas de R$50: ", notas50, "\n")
+        }
+        se (notas20 > 0) {
+          escreva("Notas de R$20: ", notas20, "\n")
+        }
+        se (notas10 > 0) {
+          escreva("Notas de R$10: ", notas10, "\n")
+        }
+        se (notas5 > 0) {
+          escreva("Notas de R$5: ", notas5, "\n")
+        }
+        se (notas2 > 0) {
+          escreva("Notas de R$2: ", notas2, "\n")
+        }
+        se (notas1 > 0) {
+          escreva("Notas de R$1: ", notas1, "\n")
+        }
+  }
+}
